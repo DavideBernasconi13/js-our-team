@@ -72,3 +72,26 @@ for (let i = 0; i < team.length; i++) {
 //     // console.log(name);
 // }
 
+const btnAdd = document.querySelector('.btn');
+btnAdd.addEventListener('click', () => {
+    creaFormAdd();
+    btnAdd.classList.add('opacity');
+}, { once: true })
+
+// costruisce il form per prendere i dati
+function creaFormAdd() {
+    let name = document.createElement('input');
+    let role = document.createElement('input');
+    let image = document.createElement('input');
+    let submit = document.createElement('button');
+    name.setAttribute('placeholder', 'Inserisci nome e cognome');
+    role.setAttribute('placeholder', 'Inserisci il ruolo');
+    image.setAttribute('value', 'angela-caroll-chief-editor.jpg');
+    submit.innerHTML = `<strong>Invia dati</strong>`
+    let addFormMember = document.getElementById('addFormMember');
+    addFormMember.appendChild(name);
+    addFormMember.appendChild(role);
+    addFormMember.appendChild(image);
+    addFormMember.appendChild(submit);
+
+}
