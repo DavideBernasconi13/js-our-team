@@ -47,12 +47,17 @@ for (let i = 0; i < team.length; i++) {
     let teamCard = document.createElement('div');
     teamCard.setAttribute('class', 'card');
     teamCanvas.appendChild(teamCard);
-    for (const key in team) {
-        let nameEl = document.createElement('div');
-        teamCard.appendChild(nameEl);
-        //nameEl.innerHTML = team[key[i]].name;
-    }
-
-
-
+    let nameEl = document.createElement('div');
+    nameEl.classList.add('nameEl');
+    teamCard.appendChild(nameEl);
 }
+
+for (const key in team) {
+    let name = document.querySelectorAll('.nameEl');
+    name[key].innerHTML = team[key].name;
+    let roleEl = document.createElement('p');
+    roleEl.classList.add('role');
+    //roleEl[key].innerHTML += team[key].role;
+    // console.log(name);
+}
+
