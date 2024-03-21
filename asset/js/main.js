@@ -1,7 +1,58 @@
 // DATI PER ESERCIZIO
-// Wayne Barnett	Founder & CEO	        wayne-barnett-founder-ceo.jpg
-// Angela Caroll	        Chief Editor	                angela-caroll-chief-editor.jpg
-// Walter Gordon	Office Manager	        walter-gordon-office-manager.jpg
-// Angela Lopez	        Social Media Manager	angela-lopez-social-media-manager.jpg
-// Scott Estrada	        Developer	                 scott-estrada-developer.jpg
-// Barbara Ramos	Graphic Designer	         barbara-ramos-graphic-designer.jpg
+
+// 	        	               
+// 		        
+// 	        	
+// 	        	                 
+
+
+const team = [
+    pers1 = {
+        'name': 'Wayne Barnett',
+        'role': 'Founder & CEO',
+        'photoName': 'wayne-barnett-founder-ceo.jpg'
+    },
+    pers2 = {
+        'name': 'Angela Caroll',
+        'role': 'Chief Editor',
+        'photoName': 'angela-caroll-chief-editor.jpg'
+    },
+    pers3 = {
+        'name': 'Walter Gordon',
+        'role': 'Office Manager',
+        'photoName': 'walter-gordon-office-manager.jpg'
+    },
+    pers4 = {
+        'name': 'Angela Lopez',
+        'role': 'Social Media Manager',
+        'photoName': 'angela-lopez-social-media-manager.jpg'
+    },
+    pers5 = {
+        'name': 'Scott Estrada',
+        'role': 'Developer',
+        'photoName': 'scott-estrada-developer.jpg'
+    },
+    pers6 = {
+        'name': 'Barbara Ramos',
+        'role': 'Graphic Designer',
+        'photoName': 'barbara-ramos-graphic-designer.jpg'
+    }
+]
+
+
+
+let teamCanvas = document.getElementById('teamCanvas');
+
+for (let i = 0; i < team.length; i++) {
+    let teamCard = document.createElement('div');
+    teamCard.setAttribute('class', 'card');
+    teamCanvas.appendChild(teamCard);
+    for (const key in team) {
+        let nameEl = document.createElement('div');
+        teamCard.appendChild(nameEl);
+        //nameEl.innerHTML = team[key[i]].name;
+    }
+
+
+
+}

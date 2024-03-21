@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid red;
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+/* team canvas */
+#teamCanvas {
+    border: 1px solid red;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid red;
+    height: 80px;
+    display: flex;
+    padding: 15px;
+    width: calc(100% / 3);
+}
