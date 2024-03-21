@@ -1,11 +1,4 @@
-// DATI PER ESERCIZIO
-
-// 	        	               
-// 		        
-// 	        	
-// 	        	                 
-
-
+// creo oggetto per team
 const team = [
     pers1 = {
         'name': 'Wayne Barnett',
@@ -47,17 +40,35 @@ for (let i = 0; i < team.length; i++) {
     let teamCard = document.createElement('div');
     teamCard.setAttribute('class', 'card');
     teamCanvas.appendChild(teamCard);
-    let nameEl = document.createElement('div');
-    nameEl.classList.add('nameEl');
-    teamCard.appendChild(nameEl);
-}
 
-for (const key in team) {
-    let name = document.querySelectorAll('.nameEl');
-    name[key].innerHTML = team[key].name;
+    let teamphoto = document.createElement('img');
+    const pathImg = `asset/img/${team[i].photoName}`;
+    teamphoto.setAttribute('src', pathImg);
+    teamCard.appendChild(teamphoto);
+
+    // creo il div che ha dentro le info
+    let cardinfo = document.createElement('div');
+    cardinfo.classList.add('card-info');
+    teamCard.appendChild(cardinfo);
+
+    //creo il tag per nome 
+    let name = document.createElement('h4');
+    name.innerHTML = team[i].name;
+    cardinfo.appendChild(name);
+
+    //creo il tag per il ruolo
     let roleEl = document.createElement('p');
     roleEl.classList.add('role');
-    //roleEl[key].innerHTML += team[key].role;
-    // console.log(name);
+    roleEl.innerHTML = team[i].role;
+    cardinfo.appendChild(roleEl)
 }
+
+// for (const key in team) {
+//     let name = document.querySelectorAll('.nameEl');
+//     name[key].innerHTML = team[key].name;
+//     let roleEl = document.createElement('p');
+//     roleEl.classList.add('role');
+//     //roleEl[key].innerHTML += team[key].role;
+//     // console.log(name);
+// }
 

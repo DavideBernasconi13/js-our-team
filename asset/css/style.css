@@ -18,16 +18,37 @@ p {
 
 /* team canvas */
 #teamCanvas {
-    border: 1px solid red;
     padding-top: 80px;
     display: flex;
     flex-wrap: wrap;
+    gap: 40px 15px;
+    justify-content: space-between;
 }
 
 .card {
-    border: 1px solid red;
-    height: 80px;
     display: flex;
-    padding: 15px;
-    width: calc(100% / 3);
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-info {
+    padding: 10px;
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.card-info h4 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.3rem;
 }
